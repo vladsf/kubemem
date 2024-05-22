@@ -10,7 +10,7 @@ unsigned long parse_byte_file(char *path) {
 
   unsigned long value;
   int read_result = fscanf(file, "%lu", &value);
-  if(read_result != 0 && read_result != 1) {
+  if(read_result != 1) {
     exit(ERR_CGROUP_READ_FAILED);
   }
 
